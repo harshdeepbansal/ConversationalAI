@@ -16,8 +16,10 @@ def getLLamaresponse(input_text, no_words, blog_style):
 
     # Prompt Template
     template = """
-        Write a summary in {blog_style} tone for {input_text}
-        within {no_words} words.
+        Write a summary in {blog_style} tone for the given {input_text}
+        within {no_words} words and most importantly it should not exceed the word limit of : {no_words}.
+        And it should give summarized content in {no_words} in a paragraph only.
+        Note : AND IF YOU CAN'T SUMMARIZE IT JUST SAY 'Unable to perform the given task', DON'T PROVIDE MISLEADING INFORMATION.
     """
     
     prompt = PromptTemplate(input_variables=["blog_style", "input_text", 'no_words'],
