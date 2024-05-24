@@ -90,4 +90,5 @@ if st.session_state.summarized_content:
 
     if st.button("Translate Summary"):
         translated_text = translate_text(st.session_state.summarized_content, src_lang, tgt_lang)
+        st.write(st.session_state.summarized_content)
         st.write(translated_text)
