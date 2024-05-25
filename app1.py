@@ -12,7 +12,7 @@ def getLLamaresponse(input_text, no_words, blog_style):
     try:
         llm = CTransformers(model='models/llama-2-7b-chat.ggmlv3.q2_K.bin',
                             model_type='llama',
-                            config={'max_new_tokens': 256, 'temperature': 0.01},
+                            config={'max_new_tokens': 256, 'temperature': 0.01, 'context_length' : 1024},
                             device='cuda')
 
         # Prompt Template
