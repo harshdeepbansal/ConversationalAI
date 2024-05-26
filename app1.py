@@ -18,7 +18,7 @@ def getLLamaresponse(input_text, no_words, blog_style):
         # Prompt Template
         template = """
             Write a summary in {blog_style} tone for the given {input_text}
-            within {no_words} WORDS ONLY and in PARAGHRAPH only. 
+            strictly within {no_words} WORDS ONLY and in PARAGHRAPH only. 
         """
         
         prompt = PromptTemplate(input_variables=["blog_style", "input_text", 'no_words'],
